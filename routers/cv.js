@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const CV = require("../models/CV");
 
-router.get("/", async (req, res) => {
+router.get("", async (req, res) => {
   await CV.find({}).then((data) => {
     res.json("Welcom to the CV-Generator Server");
   });
