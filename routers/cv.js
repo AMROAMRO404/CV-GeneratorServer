@@ -1,8 +1,10 @@
 const router = require("express").Router();
 const CV = require("../models/CV");
 
-router.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname + "/index.html"));
+router.get("/", async (req, res) => {
+  await CV.find({}).then((data) => {
+    res.json("Welcom to the CV-Generator Server");
+  });
 });
 
 //get one cv by user id
