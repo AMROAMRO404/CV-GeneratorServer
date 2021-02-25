@@ -1,8 +1,7 @@
 const router = require("express").Router();
 const CV = require("../models/CV");
-const app = express();
 
-app.get("/", function (req, res) {
+router.get("/", function (req, res) {
   res.sendFile(path.join(__dirname + "/index.html"));
 });
 
