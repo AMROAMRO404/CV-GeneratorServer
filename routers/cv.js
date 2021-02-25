@@ -2,7 +2,7 @@ const router = require("express").Router();
 const CV = require("../models/CV");
 
 router.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname + "/index.html"));
+  res.sendFile(path.join(__dirname + "../index.html"));
 });
 
 //get one cv by user id
